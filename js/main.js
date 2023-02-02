@@ -60,7 +60,7 @@ const agregarFilaATabla = (persona) => {
         console.log(personaEncontrada)
         const indice = personas.indexOf(personaEncontrada);
         console.log(indice)
-        
+
         tabla.rows[indice].cells[0].innerHTML = obtener_valor_radio();
         tabla.rows[indice].cells[1].innerHTML = nombreInput.value;
         tabla.rows[indice].cells[2].innerHTML = edadInput.value;
@@ -73,6 +73,7 @@ const agregarFilaATabla = (persona) => {
         personaEncontrada.edad = edadInput.value;
 
         localStorage.setItem('personas', JSON.stringify(personas));
+        location.reload()
     };
 
 
